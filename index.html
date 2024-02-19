@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo"><a href="#">Fernando</a></div>
+    <div class="nav">
+        <div class="nav-items primary">
+            <a href="#" id="main-event">Main event</a>
+            <a href="#">Design work</a>
+            <a href="#">Short films</a>
+        </div>
+        <div class="nav-items">
+            <a href="#">2023</a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <video src="img/Composição 1_1.mp4"></video>
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                                <span>A feast for the eyes</span>
+                            </div>
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="header">
+                                <p>Story of volatile fashion</p>
+                                <h1>Turbulance</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                                <span>Digital boutique</span>
+                            </div>
+                            <div class="row-items">
+                                <span>Indie</span>
+                                <ion-icon name="add-sharp"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <video src="img/digitalbackground.mp4"></video>
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                                <span>A feast for the eyes</span>
+                            </div>
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="header">
+                                <p>Story of volatile fashion</p>
+                                <h1>Turbulance</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-items">
+                                <ion-icon name="add-sharp"></ion-icon>
+                                <span>Digital boutique</span>
+                            </div>
+                            <div class="row-items">
+                                <span>Indie</span>
+                                <ion-icon name="add-sharp"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                <ion-icon name="arrow-back-sharp"></ion-icon>
+            </a>
+
+            <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                <ion-icon name="arrow-forward-sharp"></ion-icon>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const carouselitems = document.querySelectorAll(".carousel-item")
+        document.querySelector(".carousel-item:first-child .carousel-caption").classList.add("animate-in")
+
+        carouselitems.forEach((item) => {
+            item.addEventListener("transitioned", (e) => {
+                if(e.target.classList.contains("active")){
+                    const caption = e.target.querySelector(".carousel-caption")
+                    if(caption)
+                    {
+                        caption.classList.add("animate-in")
+                    }
+                    else{
+                        const caption = e.target.querySelector(".carousel-caption")
+                        if(caption)
+                        {
+                            caption.classList.remove("animate-in")
+                        }
+                    }
+                }
+            })
+        })
+    </script>
+    
+</body>
+</html>
